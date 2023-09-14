@@ -98,7 +98,7 @@ class Profil extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Visuddhatma Sankara",
+                        "ALEX JHON",
                         style: TextStyle(
                           fontSize: 15.0,
                           fontWeight: FontWeight.w500,

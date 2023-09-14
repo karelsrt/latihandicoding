@@ -50,91 +50,93 @@ class MyLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Center(
-          child: Container(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  "assets/gambar/Logo.png",
-                  width: 120.0,
-                  height: 120.0,
-                  fit: BoxFit.fill,
-                ),
-                const SizedBox(
-                  height: 39.0,
-                ),
-                Text(
-                  "Super Money",
-                  style: bold39.copyWith(color: primary),
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  maxLength: 20,
-                  decoration: const InputDecoration(
-                    labelText: 'User Name',
-                    labelStyle: TextStyle(
-                      color: Colors.blueGrey,
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/gambar/Logo.png",
+                    width: 120.0,
+                    height: 120.0,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    height: 39.0,
+                  ),
+                  Text(
+                    "Super Money",
+                    style: bold39.copyWith(color: primary),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  TextFormField(
+                    maxLength: 20,
+                    decoration: const InputDecoration(
+                      labelText: 'User Name',
+                      labelStyle: TextStyle(
                         color: Colors.blueGrey,
                       ),
-                    ),
-                    helperText: "User Name : admin",
-                  ),
-                  onChanged: (value) {
-                    user = value;
-                  },
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  maxLength: 20,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
-                    labelStyle: TextStyle(
-                      color: Colors.blueGrey,
-                    ),
-                    suffixIcon: Icon(
-                      Icons.password,
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blueGrey,
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blueGrey,
+                        ),
                       ),
+                      helperText: "User Name : admin",
                     ),
-                    helperText: 'Enter your password: 123',
-                  ),
-                  onChanged: (value) {
-                    password = value;
-                  },
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                Container(
-                  height: 72,
-                  width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.all(12.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blueGrey,
-                    ),
-                    onPressed: () {
-                      doLogin(context);
+                    onChanged: (value) {
+                      user = value;
                     },
-                    child: const Text("Login"),
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  TextFormField(
+                    maxLength: 20,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Password',
+                      labelStyle: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.password,
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blueGrey,
+                        ),
+                      ),
+                      helperText: 'Enter your password: 123',
+                    ),
+                    onChanged: (value) {
+                      password = value;
+                    },
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  Container(
+                    height: 72,
+                    width: MediaQuery.of(context).size.width,
+                    padding: const EdgeInsets.all(12.0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
+                      ),
+                      onPressed: () {
+                        doLogin(context);
+                      },
+                      child: const Text("Login"),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
