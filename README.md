@@ -1,6 +1,4 @@
-# latihandicoding
-
-APLIKASI LATIHAN DICODING
+# APLIKASI LATIHAN DICODING
 
 Tugas Akhir Belajar Membuat Aplikasi Flutter untuk Pemula
 
